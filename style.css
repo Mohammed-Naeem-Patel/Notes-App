@@ -23,9 +23,16 @@
 }
 .container button img{
     width: 25px;
-    margin: right;
+    margin-right:10px;
 }
-.container button{
+.btns{
+    display: flex;
+    align-items: center;
+    gap:15px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+.btns #btn {
     display: flex;
     align-items: center;
     color: #fff;
@@ -35,8 +42,17 @@
     border:0;
     border-radius: 40px;
     padding: 15px 25px;
-    margin: 30px 0 20px;
+    margin: 30px 0px 20px;
     cursor: pointer;
+}
+.btns #thm{
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
 }
 .note{
     position: relative;
@@ -56,7 +72,54 @@
 .note img{
     width:25px;
     position: absolute;
-    bottom: 15px;
     right:15px;
+    bottom: 0px;
     cursor: pointer;
+    transition: 0.3s;
+}
+.note img:hover{
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+.date{
+    font-size:13px;
+    font-weight: 500;
+    color:#444;
+    margin-bottom:10px;
+    padding-right:40px;
+}
+
+.dark-theme{
+    background:linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+.dark-theme h1{
+    color:#ffffff;
+}
+
+.dark-theme #btn{
+    background: linear-gradient(135deg, #6d28d9, #4c1d95);
+    color:#ffffff;
+}
+
+.dark-theme #thm{
+    background:#444;
+    color: #fff;
+}
+.dark-theme #thm:hover{
+    background: #555;
+}
+.dark-theme .input-box{
+    background: #2d2d2d;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+.dark-theme .note img{
+    filter: invert(1);
+}
+.dark-theme .date{
+    font-size:13px;
+    color:#888;
+    margin-bottom:10px;
+    padding-right:40px;
 }
